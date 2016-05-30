@@ -663,6 +663,14 @@ public:
     }
 
     /**
+     * Open a new or existing CppBindModule for registrations.
+     */
+    CppBindModule<LuaBinding> module()
+    {
+        return CppBindModule<LuaBinding>(m_meta);
+    }
+
+    /**
      * Open a new or existing class for registrations.
      */
     template <typename T>
